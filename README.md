@@ -1,1 +1,1 @@
-# mini-massage-board
+# mini-message-board
