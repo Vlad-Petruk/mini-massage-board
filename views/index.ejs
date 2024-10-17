@@ -6,10 +6,15 @@
   <body>
     <h1><%= title %></h1>
     <% for (let i = 0; i < messages.length; i++) { %>
+      <div>
         <p><%= messages[i].user %></p>
         <p><%= messages[i].text %></p>
         <p><%= messages[i].added %></p>
-      <% } %>
+        <a href="/message/<%= messages[i].added %>">
+          <button type="button">Open message</button>
+        </a>
+      </div>
+    <% } %>
 
     <a href="<%= links[1].href %>">
         <span><%= links[1].text %></span>
