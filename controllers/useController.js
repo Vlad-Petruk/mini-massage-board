@@ -30,7 +30,7 @@ const messages = [
     }
   ];
 
-async function getAllMassages (req, res) {
+async function getAllMessages (req, res) {
     res.render("index", { links: links, title: "Mini Messageboard", messages: messages});
 }
 
@@ -55,7 +55,7 @@ async function createNewMessage (req, res) {
 }
 
 module.exports = {
-    getAllMassages,
+    getAllMessages,
     getNewForm,
     getMessageById,
     createNewMessage
