@@ -11,7 +11,8 @@ CREATE TABLE IF NOT EXISTS messages (
 INSERT INTO messages (username, text)
 VALUES 
   ('Vlad', 'Chinazes'),
-  ('Dasha', 'Realy?');
+  ('Dasha', 'Realy?')
+  ON CONFLICT DO NOTHING;
 `
 
 async function main() {
@@ -25,6 +26,8 @@ async function main() {
 
   await client.connect();
   await client.query(SQL);
+  // const result = await client.query("SELECT * FROM messages");
+  //   console.log("Inserted data:", result.rows);
   await client.end();
   console.log("done");
 }
