@@ -7,10 +7,9 @@
     <h1><%= title %></h1>
     <% for (let i = 0; i < messages.length; i++) { %>
       <div>
-        <p><%= messages[i].user %></p>
+        <p><%= messages[i].username %></p>
         <p><%= messages[i].text %></p>
-        <p><%= messages[i].added %></p>
-        <a href="/message/<%= messages[i].added %>">
+        <a href="/message/<%= messages[i].id %>">
           <button type="button">Open message</button>
         </a>
       </div>
